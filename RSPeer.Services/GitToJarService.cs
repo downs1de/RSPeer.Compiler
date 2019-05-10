@@ -84,7 +84,8 @@ namespace RSPeer.Services
             {
                 BranchName = "master",
                 Checkout = true,
-                CredentialsProvider = (url, user, cred) => credentials
+                CredentialsProvider = (url, user, cred) => credentials,
+                RecurseSubmodules = true
             };
 
             Repository.Clone(repoUrl, path, cloneOptions);
